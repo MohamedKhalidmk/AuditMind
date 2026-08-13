@@ -1,4 +1,4 @@
-# Mini-AuditAgent
+# AuditAgent
 
 An AI-powered smart contract vulnerability scanner combining deterministic
 static analysis (Slither) with LLM reasoning (Claude Haiku + Sonnet) and
