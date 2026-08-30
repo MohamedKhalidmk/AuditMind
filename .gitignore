@@ -1,0 +1,8 @@
+venv/
+*.tar.gz
+node_modules*/
+solc_*/
+dappscan_sparse/
+.DS_Store
+__pycache__/
+*.pyc
