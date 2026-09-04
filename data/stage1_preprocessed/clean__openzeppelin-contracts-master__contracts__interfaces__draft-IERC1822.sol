@@ -1,0 +1,10 @@
+
+
+
+pragma solidity >=0.4.16;
+
+
+interface IERC1822Proxiable {
+    
+    function proxiableUUID() external view returns (bytes32);
+}

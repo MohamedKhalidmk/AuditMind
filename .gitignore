@@ -6,3 +6,20 @@ dappscan_sparse/
 .DS_Store
 __pycache__/
 *.pyc
+
+# vendored source repos (cloned for Slither compilation, not part of the project)
+aave-v3-core-master/
+comet-main/
+limit-order-protocol-master/
+morpho-blue-main/
+openzeppelin-contracts-master/
+openzeppelin-contracts-upgradeable-master/
+seaport-main/
+solmate-main/
+v4-core-main/
+yearn-vaults-v3-master/
+dappscan_sparse/
+diagrams/
+node_modules_oz/
+node_modules_oz_v4/
+venv/

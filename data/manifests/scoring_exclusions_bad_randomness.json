@@ -1,0 +1,13 @@
+[
+  "data/smartbugs/bad_randomness/blackjack.sol",
+  "data/smartbugs/bad_randomness/etheraffle.sol",
+  "data/smartbugs/bad_randomness/guess_the_random_number.sol",
+  "data/smartbugs/bad_randomness/lottery.sol",
+  "data/smartbugs/bad_randomness/lucky_doubler.sol",
+  "data/smartbugs/bad_randomness/old_blockhash.sol",
+  "data/smartbugs/bad_randomness/random_number_generator.sol",
+  "data/smartbugs/bad_randomness/smart_billions.sol",
+  "data/swc/bad_randomness/guess_the_random_number.sol",
+  "data/swc/bad_randomness/old_blockhash.sol",
+  "data/swc/bad_randomness/random_number_generator.sol"
+]

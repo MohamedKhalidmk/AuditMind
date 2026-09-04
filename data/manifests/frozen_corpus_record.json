@@ -1,0 +1,12 @@
+{
+  "corpus_hash": "46f0c6bbb113a6dbb2b4ffba5fef1a35463fe673b04416d36290658a9535db56",
+  "total_files": 723,
+  "vulnerable_count": 212,
+  "clean_count": 511,
+  "sources": {
+    "smartbugs": 116,
+    "swc": 13,
+    "dappscan": 83,
+    "clean": 511
+  }
+}

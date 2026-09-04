@@ -1,0 +1,12 @@
+
+
+
+pragma solidity >=0.6.2;
+
+import {IERC20} from "./IERC20.sol";
+
+
+interface IERC7674 is IERC20 {
+    
+    function temporaryApprove(address spender, uint256 value) external returns (bool success);
+}

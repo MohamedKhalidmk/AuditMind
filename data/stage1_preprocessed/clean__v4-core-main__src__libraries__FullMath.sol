@@ -1,0 +1,117 @@
+
+pragma solidity ^0.8.0;
+
+
+
+
+library FullMath {
+    
+    
+    
+    
+    
+    
+    function mulDiv(uint256 a, uint256 b, uint256 denominator) internal pure returns (uint256 result) {
+        unchecked {
+            
+            
+            
+            
+            
+            uint256 prod0 = a * b; 
+            uint256 prod1; 
+            assembly ("memory-safe") {
+                let mm := mulmod(a, b, not(0))
+                prod1 := sub(sub(mm, prod0), lt(mm, prod0))
+            }
+
+            
+            
+            require(denominator > prod1);
+
+            
+            if (prod1 == 0) {
+                assembly ("memory-safe") {
+                    result := div(prod0, denominator)
+                }
+                return result;
+            }
+
+            
+            
+            
+
+            
+            
+            uint256 remainder;
+            assembly ("memory-safe") {
+                remainder := mulmod(a, b, denominator)
+            }
+            
+            assembly ("memory-safe") {
+                prod1 := sub(prod1, gt(remainder, prod0))
+                prod0 := sub(prod0, remainder)
+            }
+
+            
+            
+            
+            uint256 twos = (0 - denominator) & denominator;
+            
+            assembly ("memory-safe") {
+                denominator := div(denominator, twos)
+            }
+
+            
+            assembly ("memory-safe") {
+                prod0 := div(prod0, twos)
+            }
+            
+            
+            
+            assembly ("memory-safe") {
+                twos := add(div(sub(0, twos), twos), 1)
+            }
+            prod0 |= prod1 * twos;
+
+            
+            
+            
+            
+            
+            uint256 inv = (3 * denominator) ^ 2;
+            
+            
+            
+            inv *= 2 - denominator * inv; 
+            inv *= 2 - denominator * inv; 
+            inv *= 2 - denominator * inv; 
+            inv *= 2 - denominator * inv; 
+            inv *= 2 - denominator * inv; 
+            inv *= 2 - denominator * inv; 
+
+            
+            
+            
+            
+            
+            
+            result = prod0 * inv;
+            return result;
+        }
+    }
+
+    
+    
+    
+    
+    
+    function mulDivRoundingUp(uint256 a, uint256 b, uint256 denominator) internal pure returns (uint256 result) {
+        unchecked {
+            result = mulDiv(a, b, denominator);
+            if (mulmod(a, b, denominator) != 0) {
+                require(++result > 0);
+            }
+        }
+    }
+}

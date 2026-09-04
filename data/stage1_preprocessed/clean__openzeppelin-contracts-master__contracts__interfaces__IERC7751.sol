@@ -1,0 +1,9 @@
+
+
+
+pragma solidity >=0.8.4;
+
+
+interface IERC7751 {
+    error WrappedError(address target, bytes4 selector, bytes reason, bytes details);
+}

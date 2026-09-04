@@ -1,0 +1,317 @@
+[
+  {
+    "path": "data/smartbugs/reentrancy/reentrancy_bonus.sol",
+    "source": "smartbugs",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "Slither IR assertion failure"
+  },
+  {
+    "path": "data/smartbugs/reentrancy/reentrancy_cross_function.sol",
+    "source": "smartbugs",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "Slither IR assertion failure"
+  },
+  {
+    "path": "data/smartbugs/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+    "source": "smartbugs",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "Slither constant-folding limitation"
+  },
+  {
+    "path": "data/dappscan/reentrancy/dappscan_sparse__DAppSCAN-source__contracts__Solidity_Finance-OKLG - Smart Contract__contracts-e167d0d742d21bcc62d7a5b770a1f0ed1cf31eca__contracts__OKLGTokenLocker.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/reentrancy/dappscan_sparse__DAppSCAN-source__contracts__Iosiro-Synthetix Vest Tool Smart Contract Audit__tokenvest-36573f264d42d4549b9f903a014783e01029c978__Vester.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/reentrancy/dappscan_sparse__DAppSCAN-source__contracts__QuillAudits-1inch-Fee Collector__fee-collector-3c2626763fd829500496f15476d5e98fbdf4f574__contracts__FeeCollector.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "OZ v5 constructor signature mismatch"
+  },
+  {
+    "path": "data/dappscan/reentrancy/dappscan_sparse__DAppSCAN-source__contracts__PeckShield-BNPL__BNPL-0ee587a081668dcab166a3a275b8a6c4794ead4d__contracts__BankingNode.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/time_manipulation/dappscan_sparse__DAppSCAN-source__contracts__Hacken-Samurai Legends__contract_samurai-legends-tokens-aff9f451dffc6854f29375ac21f8cedba8ee1101__contracts__SamuraiLegendsStaking.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/access_control/dappscan_sparse__DAppSCAN-source__contracts__Hacken-Kingdom Raids__kr-nft-6dafe413dd90e5b1c1e85a5b8ec6c8fc71fd87af__kr-nft-6dafe413dd90e5b1c1e85a5b8ec6c8fc71fd87af__contracts__Summon.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/access_control/dappscan_sparse__DAppSCAN-source__contracts__Ackee_Blockchain-Zunami_protocol__ZunamiProtocol-37dccabf5aa3697dce5eaf6457debb3ac7404fdd__contracts__Zunami.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "OZ v5 constructor signature mismatch"
+  },
+  {
+    "path": "data/dappscan/access_control/dappscan_sparse__DAppSCAN-source__contracts__Hacken-Centrality__bridge-contracts-047cecbfc86f10cdc3310c6ebb399de2e7c737a3__CENNZnetBridge.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "OZ v5 constructor signature mismatch"
+  },
+  {
+    "path": "data/dappscan/access_control/dappscan_sparse__DAppSCAN-source__contracts__Hacken-Overnight__ovnstable-core-e76b55af45a5125a99c4d32da8702123d0662ea7__contracts__Balancer.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/access_control/dappscan_sparse__DAppSCAN-source__contracts__BlockSec-blocksec_stnd_v1.7_signed__standard-evm-d7c016ca098a4e5a554583c499fc0cead4db7088__contracts__pools__liquidation__Liquidator.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "other"
+  },
+  {
+    "path": "data/dappscan/denial_of_service/dappscan_sparse__DAppSCAN-source__contracts__Hacken-StudentCoin__stc-erc20-v2-412905ffa414c34b75fa4c52e5993318b2a5f067__STCERC20.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/denial_of_service/dappscan_sparse__DAppSCAN-source__contracts__Hacken-Game of Silks__code__ERC721A.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "other"
+  },
+  {
+    "path": "data/dappscan/denial_of_service/dappscan_sparse__DAppSCAN-source__contracts__Solidity_Finance-OKLG - Smart Contract__contracts-e167d0d742d21bcc62d7a5b770a1f0ed1cf31eca__contracts__OKLGPasswordManager.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/dappscan/denial_of_service/dappscan_sparse__DAppSCAN-source__contracts__Hacken-PolkaBridge__PolkaBridge-DEX-21b662c48caf08242bfa01621bbbafc957e4ff31__farming__Contracts__PolkaBridgeFarm.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "OZ v5 constructor signature mismatch"
+  },
+  {
+    "path": "data/dappscan/denial_of_service/dappscan_sparse__DAppSCAN-source__contracts__Solidity_Finance-OKLG - Smart Contract__contracts-e167d0d742d21bcc62d7a5b770a1f0ed1cf31eca__contracts__OKLGAtomicSwap.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "OZ v5 constructor signature mismatch"
+  },
+  {
+    "path": "data/dappscan/mixed/denial_of_service_time_manipulation/dappscan_sparse__DAppSCAN-source__contracts__QuillAudits-Locklet Smart Contract__locklet-evm-contracts-7fd89cbcf96a10429b9cfeee295dd4c51c2af982__contracts__LockletTokenVault.sol",
+    "source": "dappscan",
+    "label_type": "vulnerable",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__access__Ownable2StepUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__access__AccessControlUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__access__OwnableUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__MulticallUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__PausableUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__ContextUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__NoncesUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__NoncesKeyedUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__metatx__ERC2771ContextUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__governance__TimelockControllerUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__finance__VestingWalletCliffUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__finance__VestingWalletUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__cryptography__EIP712Upgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__utils__introspection__ERC165Upgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__access__extensions__AccessControlDefaultAdminRulesUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__access__manager__AccessManagedUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__ERC20Upgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__common__ERC2981Upgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__extensions__ERC20FlashMintUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__extensions__ERC20BurnableUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__extensions__ERC20PermitUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__extensions__ERC20PausableUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/openzeppelin-contracts-upgradeable-master__contracts__token__ERC20__extensions__ERC20CappedUpgradeable.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/limit-order-protocol-master__contracts__utils__EIP712Alien.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__IVault.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  },
+  {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__IVaultFactory.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+  }
+]

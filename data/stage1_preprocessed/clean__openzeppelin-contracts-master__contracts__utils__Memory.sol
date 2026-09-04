@@ -1,0 +1,122 @@
+
+
+
+pragma solidity ^0.8.24;
+
+import {Panic} from "./Panic.sol";
+import {Math} from "./math/Math.sol";
+
+
+library Memory {
+    type Pointer is bytes32;
+
+    
+    function getFreeMemoryPointer() internal pure returns (Pointer ptr) {
+        assembly ("memory-safe") {
+            ptr := mload(0x40)
+        }
+    }
+
+    
+    function unsafeSetFreeMemoryPointer(Pointer ptr) internal pure {
+        assembly ("memory-safe") {
+            mstore(0x40, ptr)
+        }
+    }
+
+    
+    function forward(Pointer ptr, uint256 offset) internal pure returns (Pointer) {
+        return Pointer.wrap(bytes32(uint256(Pointer.unwrap(ptr)) + offset));
+    }
+
+    
+    function equal(Pointer ptr1, Pointer ptr2) internal pure returns (bool) {
+        return Pointer.unwrap(ptr1) == Pointer.unwrap(ptr2);
+    }
+
+    type Slice is bytes32;
+
+    
+    function asSlice(bytes memory self) internal pure returns (Slice result) {
+        assembly ("memory-safe") {
+            result := or(shl(128, mload(self)), add(self, 0x20))
+        }
+    }
+
+    
+    function length(Slice self) internal pure returns (uint256 result) {
+        assembly ("memory-safe") {
+            result := shr(128, self)
+        }
+    }
+
+    
+    function slice(Slice self, uint256 offset) internal pure returns (Slice) {
+        if (offset > length(self)) Panic.panic(Panic.ARRAY_OUT_OF_BOUNDS);
+        return _asSlice(length(self) - offset, forward(_pointer(self), offset));
+    }
+
+    
+    function slice(Slice self, uint256 offset, uint256 len) internal pure returns (Slice) {
+        if (offset + len > length(self)) Panic.panic(Panic.ARRAY_OUT_OF_BOUNDS);
+        return _asSlice(len, forward(_pointer(self), offset));
+    }
+
+    
+    function load(Slice self, uint256 offset) internal pure returns (bytes32 value) {
+        uint256 outOfBoundBytes = Math.saturatingSub(0x20 + offset, length(self));
+        if (outOfBoundBytes > 0x1f) Panic.panic(Panic.ARRAY_OUT_OF_BOUNDS);
+
+        assembly ("memory-safe") {
+            value := and(mload(add(and(self, shr(128, not(0))), offset)), shl(mul(8, outOfBoundBytes), not(0)))
+        }
+    }
+
+    
+    function toBytes(Slice self) internal pure returns (bytes memory result) {
+        uint256 len = length(self);
+        Pointer ptr = _pointer(self);
+        assembly ("memory-safe") {
+            result := mload(0x40)
+            mstore(result, len)
+            mcopy(add(result, 0x20), ptr, len)
+            mstore(0x40, add(add(result, len), 0x20))
+        }
+    }
+
+    
+    function equal(Slice a, Slice b) internal pure returns (bool result) {
+        uint256 len = length(a);
+        if (len == length(b)) {
+            Memory.Pointer ptrA = _pointer(a);
+            Memory.Pointer ptrB = _pointer(b);
+            assembly ("memory-safe") {
+                result := eq(keccak256(ptrA, len), keccak256(ptrB, len))
+            }
+        }
+        
+    }
+
+    
+    function isReserved(Slice self) internal pure returns (bool result) {
+        Memory.Pointer fmp = getFreeMemoryPointer();
+        Memory.Pointer end = forward(_pointer(self), length(self));
+        assembly ("memory-safe") {
+            result := iszero(lt(fmp, end)) 
+        }
+    }
+
+    
+    function _asSlice(uint256 len, Pointer ptr) private pure returns (Slice result) {
+        assembly ("memory-safe") {
+            result := or(shl(128, len), ptr)
+        }
+    }
+
+    
+    function _pointer(Slice self) private pure returns (Pointer result) {
+        assembly ("memory-safe") {
+            result := and(self, shr(128, not(0)))
+        }
+    }
+}

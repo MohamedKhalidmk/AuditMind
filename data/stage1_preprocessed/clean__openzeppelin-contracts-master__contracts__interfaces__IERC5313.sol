@@ -1,0 +1,10 @@
+
+
+
+pragma solidity >=0.4.16;
+
+
+interface IERC5313 {
+    
+    function owner() external view returns (address);
+}
