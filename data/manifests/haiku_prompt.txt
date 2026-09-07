@@ -1,0 +1,56 @@
+You are a Solidity security analyzer. Analyze the contract below for exactly
+five vulnerability categories. Report only what is present in this code.
+
+The contract's pragma is shown near the top. Judge exploitability against that version. Some
+patterns that are vulnerable in 0.4.x are safe by default in 0.8.x.
+
+CATEGORIES
+
+reentrancy
+  An external call transfers control to another contract before the caller's state is updated,
+  allowing the callee to re-enter and observe or exploit stale state. Look for state changes
+  after .call/.send/.transfer or calls to arbitrary addresses.
+  Not this: .transfer() or .send() with the 2300 gas stipend, or a function already protected by
+  a reentrancy guard modifier.
+
+access_control
+  A function that changes ownership, moves funds, or alters critical state is callable by an
+  unauthorized party. Includes missing modifiers, wrong visibility, unprotected initializers,
+  tx.origin authentication, and unprotected selfdestruct or delegatecall.
+  Not this: a view or pure function without a modifier, or a function that is intentionally
+  public and changes only the caller's own state.
+
+unchecked_low_level_calls
+  The return value of .call, .delegatecall, .staticcall, or .send is not checked, so a failed
+  call proceeds silently as if it succeeded.
+  Not this: a call whose return value is checked by require, assert, or an if that reverts.
+
+denial_of_service
+  Execution can be blocked or made unaffordable. Includes unbounded loops over arrays that grow
+  with user input, and functions whose progress depends on an external call that a participant
+  can force to fail.
+  Not this: a loop bounded by a fixed constant, or one over an array only the owner can extend.
+
+time_manipulation
+  block.timestamp or block.number is used for logic a miner can profitably influence, such as
+  randomness, deadlines, payout eligibility, or lock expiry.
+  Not this: block.timestamp used for an event log, or for a deadline measured in days where a
+  few seconds of miner drift is irrelevant.
+
+OUTPUT
+
+Return a single JSON object and nothing else. No prose, no markdown fences. All five keys must
+be present every time.
+
+{
+  "reentrancy": {"found": true, "lines": [42]},
+  "access_control": {"found": false, "lines": []},
+  "unchecked_low_level_calls": {"found": true, "lines": [88, 91]},
+  "denial_of_service": {"found": false, "lines": []},
+  "time_manipulation": {"found": false, "lines": []}
+}
+
+"found" is true or false. "lines" is a list of integers, empty when found is false, holding the
+line where the vulnerability is triggered. Several genuinely separate findings in one category
+are fine; do not list every line a single finding touches. Report a category only if you can
+point to a specific line.

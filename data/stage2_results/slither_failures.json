@@ -294,6 +294,41 @@
     "failure_reason": "crytic-compile import resolution (stricter than solc)"
   },
   {
+    "path": "data/clean_dataset/solmate-main__src__auth__Auth.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
+    "path": "data/clean_dataset/solmate-main__src__auth__Owned.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
+    "path": "data/clean_dataset/seaport-main__contracts__interfaces__ZoneInteractionErrors.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
+    "path": "data/clean_dataset/seaport-main__contracts__interfaces__ImmutableCreate2FactoryInterface.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
+    "path": "data/clean_dataset/seaport-main__contracts__helpers__navigator__lib__CriteriaHelperLib.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
     "path": "data/clean_dataset/limit-order-protocol-master__contracts__utils__EIP712Alien.sol",
     "source": "clean",
     "label_type": "clean",
@@ -301,17 +336,45 @@
     "failure_reason": "crytic-compile import resolution (stricter than solc)"
   },
   {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__IDeployer.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__Roles.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "timeout",
+    "failure_reason": "timeout (analysis exceeded 120s)"
+  },
+  {
     "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__IVault.sol",
     "source": "clean",
     "label_type": "clean",
     "status": "error",
-    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+    "failure_reason": "other"
   },
   {
     "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__IVaultFactory.sol",
     "source": "clean",
     "label_type": "clean",
     "status": "error",
-    "failure_reason": "crytic-compile import resolution (stricter than solc)"
+    "failure_reason": "other"
+  },
+  {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__contracts__interfaces__VaultConstants.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "other"
+  },
+  {
+    "path": "data/clean_dataset/yearn-vaults-v3-master__foundry_tests__utils__LibAddressSet.sol",
+    "source": "clean",
+    "label_type": "clean",
+    "status": "error",
+    "failure_reason": "other"
   }
 ]
