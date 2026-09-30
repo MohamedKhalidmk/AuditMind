@@ -87,8 +87,9 @@ close on the other's categories.
 
 <img src="visuals/routed_per_category.png" width="90%">
 
-Routing matches the better tool in every column, which is why it wins on macro F1 without the
-precision cost of unioning the two.
+Routing matches the better tool in four of five columns. The exception is denial of service, where
+the router picks Haiku forced choice (0.33) but Haiku multi-label scores higher (0.38). It still wins
+on macro F1 without the precision cost of unioning the two.
 
 ### False positives on clean code
 
@@ -111,8 +112,10 @@ truth; together they bracket it.
 
 <img src="visuals/by_source.png" width="90%">
 
-Every arm loses more than half its F1 moving from SmartBugs to DAppSCAN. That cross-source drop is
-larger than any gap between the tools.
+Every arm drops sharply moving from SmartBugs to DAppSCAN. Three of the five lose more than half their
+F1; the mildest drops, Slither all (0.36 to 0.24) and Haiku multi-label (0.38 to 0.25), still lose
+about a third. For those three, the cross-source drop is larger than the biggest gap between any two
+tools on the pooled set (0.21).
 
 ---
 
